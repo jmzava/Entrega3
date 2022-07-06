@@ -1,0 +1,4 @@
+[2022-07-06T18:20:38.544] [ERROR] fileError - se Genero el siguiente error en el controller cart / entrada buyCart TypeError: Cannot read properties of undefined (reading 'getById')
+[2022-07-06T18:35:08.656] [ERROR] fileError - se Genero el siguiente error en el controller cart / entrada buyCart SyntaxError: Unexpected token o in JSON at position 1
+[2022-07-06T18:38:13.650] [ERROR] fileError - se Genero el siguiente error en el controller cart / entrada buyCart SyntaxError: Unexpected token _ in JSON at position 4
+[2022-07-06T18:38:57.991] [ERROR] fileError - se Genero el siguiente error en el controller cart / entrada buyCart SyntaxError: Unexpected token _ in JSON at position 4

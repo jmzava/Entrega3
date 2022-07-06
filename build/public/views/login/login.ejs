@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="css/login.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+</head>
+
+<body>
+    <section>
+      <div class="container">
+        <div class="user signinBx">
+          <div class="imgBx mt-xl-4"><img src="images/logocoder.png" alt="Logo Coder" /></div>
+          <div class="formBx">
+            <form action="/api/auth/signin" method="post" return false;>
+              <h2>Ingreso</h2>
+              <input class="classInput" type="email" name="fieldEmail" placeholder="User Email" />
+              <input class="classInput" type="password" name="fieldPassword" placeholder="Password" />
+              <input class="classSubmit" type="submit" name="" value="Ingresar" />
+              <p class="signup">
+                Todavia no tienes una cuenta ?
+                <a href="#" onclick="toggleForm2();">Registrate </a>
+              </p>
+            </form>
+          </div>
+        </div>
+        <div class="user signupBx">
+          <div class="formBx">
+            <form action="/api/auth/register" method="post" return false;>
+                <h2>Crea tu Cuenta</h2>
+                <input class="classInput" type="email" name="fieldEmail" placeholder="User Email" />
+                <input class="classInput" type="password" name="fieldPassword" placeholder="Password" />
+                <input class="classInput" type="password" name="fieldRpassword" placeholder="Confirmar Password" />
+                <input class="classInput" type="text" name="fieldName" placeholder="Nombre" />
+                <input class="classInput" type="text" name="fieldSurname" placeholder="Apellido" />
+                <input class="classInput" type="text" name="fieldAddress" placeholder="Direccion" />
+                <input class="classInput" type="number" name="fieldAge" placeholder="Edad" />
+                <input class="classInput2" id="phone" type="tel" name="fieldPhone" required>  
+
+                <div class="m-3">Ingrese Avatar
+
+                <input type="file"  name="fieldImage" placeholder="Ingrese su foto" class="form-control"  accept=".jpg">
+                </div>
+                <input input class="classSubmit" type="submit" name="" value="Registrarse" />
+                <p class="signup">Ya tienes una cuenta ?
+                  <a href="#" onclick="toggleForm2();">Ingresar</a>
+                </p>
+            </form>
+          </div>
+          <div class="imgBx mt-xl-4"><img src="images/logocoder.png" alt="Logo Coder" /></div>
+          </div>
+      </div>
+    </section>
+    <script src="scripts/login.js"></script>
+    <script src="scripts/prefix.js"></script>
+
+</body>
+</html>
