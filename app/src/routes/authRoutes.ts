@@ -1,15 +1,16 @@
 import { Router, Request, Response  } from "express";
 import passport from 'passport';
 import '../middlewares/passport';
-import authController from "../controllers/authController";
+import { upload } from "../middlewares/multer"
+
 const routes = Router();
 
-routes.post('/register', passport.authenticate('local-signup', {
+routes.post('/register', upload.single('miArchivo'), passport.authenticate('local-signup', {
     successRedirect: '/products',
     failureRedirect: '/signUpError',
     passReqToCallback: true,
-    failureMessage: true
-}))
+    failureMessage: true 
+})) 
 
 routes.post('/signin', passport.authenticate('local-signin', {
     successRedirect: '/products',

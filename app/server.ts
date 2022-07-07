@@ -1,7 +1,12 @@
 import 'dotenv/config'
 import express from 'express'
 import app from './src/app'
+import minimist from "minimist";
 
+import cluster from 'cluster'
+import os from 'os'
+
+const args = minimist(process.argv.slice(2));
 
 //log de errores
 
@@ -21,8 +26,41 @@ declare module 'express-session' {
     }
 }
 
-const PORT = process.env.PORT
-app
-    .listen(PORT, () => console.log(`http://localhost:${PORT}`))
-    .on('error', err =>  logError.error("Error al levantar el servidor " + err))
+
+export const PORT =  args.port || process.env.PORT || 8080
+
+const numCPU = os.cpus().length
+const serverMode = args.mode || 'FORK'
+
+
+if(serverMode=="CLUSTER"){
+    if (cluster.isPrimary) {
+        console.log(`I am a master ${process.pid}`);
+        for (let i = 0; i < numCPU; i++) {
+        cluster.fork();
+        }
+        cluster.on("listening", (worker, address) => {
+        console.log(`${worker.process.pid} es listening in port ${address.port}`);
+        });
+    } else {
+        app
+            .listen(PORT, () => console.log(`http://localhost:${PORT} mode ${serverMode}`))
+            .on('error', err => logError.error("Error al levantar el servidor " + err))
+        }
+}else{
+    app
+    .listen(PORT, () => console.log(`http://localhost:${PORT} mode ${serverMode}`))
+    .on('error', err => logError.error("Error al levantar el servidor " + err))
+
+}
+
+
+
+
+
+
+// const PORT = process.env.PORT
+// app
+//     .listen(PORT, () => console.log(`http://localhost:${PORT}`))
+//     .on('error', err =>  logError.error("Error al levantar el servidor " + err))
     

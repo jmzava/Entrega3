@@ -6,8 +6,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const passport_1 = __importDefault(require("passport"));
 require("../middlewares/passport");
+const multer_1 = require("../middlewares/multer");
 const routes = (0, express_1.Router)();
-routes.post('/register', passport_1.default.authenticate('local-signup', {
+routes.post('/register', multer_1.upload.single('miArchivo'), passport_1.default.authenticate('local-signup', {
     successRedirect: '/products',
     failureRedirect: '/signUpError',
     passReqToCallback: true,

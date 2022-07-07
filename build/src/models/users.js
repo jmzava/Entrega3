@@ -11,11 +11,11 @@ const UserSchema = new mongoose_1.default.Schema({
     email: { type: String, required: true },
     password: { type: String, required: true },
     name: { type: String, required: true },
-    surname: { type: String, required: true },
-    address: { type: String, required: true },
-    age: { type: Number, required: true },
-    phone: { type: String, required: true },
-    pictureName: { type: String, required: true }
+    surname: { type: String },
+    address: { type: String },
+    age: { type: Number },
+    phone: { type: String },
+    pictureName: { type: String }
 });
 UserSchema.methods.encryptPassword = (password) => {
     return bcrypt_1.default.hashSync(password, bcrypt_1.default.genSaltSync(10));

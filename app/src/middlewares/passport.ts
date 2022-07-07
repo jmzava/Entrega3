@@ -2,6 +2,7 @@ import passport from 'passport'
 import { Strategy } from 'passport-local'
 import { Users } from '../models/users'
 import { passCheck } from './passCheck'
+import { sendEmail } from '../services/nodemailer'
 
 
 passport.serializeUser((user, done) => {
@@ -29,7 +30,12 @@ passport.use(
            return done(null, false, { message: 'Email already exists' })
           } else {
             const newUser = new Users()
-  
+            let avatar = ""
+            if (!req.file?.originalname){
+              avatar = "NO" 
+            }else{
+              avatar = req.file?.originalname
+            }
             newUser.email = fieldEmail
             //@ts-ignore
             newUser.password = newUser.encryptPassword(fieldPassword)
@@ -38,9 +44,14 @@ passport.use(
             newUser.address = req.body.fieldAddress
             newUser.age=req.body.fieldAge
             newUser.phone=req.body.fieldPhone
-            newUser.pictureName=req.body.fieldName
-
+            newUser.pictureName=avatar
          await newUser.save()
+         
+           let destMail = process.env.DESTMAIL
+           let subject = `nuevo usuario Registrado con el username  ${req.body.fieldName}`
+           let body = `<pre>${newUser}</pre>`
+           
+           sendEmail(destMail, body, subject)
 
             const userFromDatabase: any = await Users.findOne({ email: fieldEmail })
   

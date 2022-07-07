@@ -33,21 +33,19 @@
         </div>
         <div class="user signupBx">
           <div class="formBx">
-            <form action="/api/auth/register" method="post" return false;>
+            <form action="/api/auth/register" method="post" enctype="multipart/form-data"return false;>
                 <h2>Crea tu Cuenta</h2>
-                <input class="classInput" type="email" name="fieldEmail" placeholder="User Email" />
-                <input class="classInput" type="password" name="fieldPassword" placeholder="Password" />
-                <input class="classInput" type="password" name="fieldRpassword" placeholder="Confirmar Password" />
-                <input class="classInput" type="text" name="fieldName" placeholder="Nombre" />
+                <input class="classInput" type="email" name="fieldEmail" placeholder="User Email" required/>
+                <input class="classInput" type="password" name="fieldPassword" placeholder="Password" required/>
+                <!-- <input class="classInput" type="password" name="fieldRpassword" placeholder="Confirmar Password" /> -->
+                <input class="classInput" type="text" name="fieldName" placeholder="Nombre" required/>
                 <input class="classInput" type="text" name="fieldSurname" placeholder="Apellido" />
                 <input class="classInput" type="text" name="fieldAddress" placeholder="Direccion" />
                 <input class="classInput" type="number" name="fieldAge" placeholder="Edad" />
-                <input class="classInput2" id="phone" type="tel" name="fieldPhone" required>  
+                <input class="classInput2" id="phone" type="tel" name="fieldPhone" >  
 
-                <div class="m-3">Ingrese Avatar
 
-                <input type="file"  name="fieldImage" placeholder="Ingrese su foto" class="form-control"  accept=".jpg">
-                </div>
+                <input  class="m-3" type="file" name="miArchivo" accept=".jpg">
                 <input input class="classSubmit" type="submit" name="" value="Registrarse" />
                 <p class="signup">Ya tienes una cuenta ?
                   <a href="#" onclick="toggleForm2();">Ingresar</a>
