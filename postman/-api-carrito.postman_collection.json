@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "a7faf58d-a988-48eb-a29c-98734303f9f2",
+		"name": "/api/carrito",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9052238"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/carrito",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "pepito 3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "precio",
+							"value": "125555",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "codigo",
+							"value": "153",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/carrito",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carrito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/carrito/:id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "pepito 3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "precio",
+							"value": "125555",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "codigo",
+							"value": "153",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/carrito/62c570e7b845a3ad341bf4eb",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carrito",
+						"62c570e7b845a3ad341bf4eb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/carrito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "pepito 3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "precio",
+							"value": "125555",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "codigo",
+							"value": "153",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/carrito",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carrito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/carrito/:id/productos/:id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "pepito 3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "precio",
+							"value": "125555",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "codigo",
+							"value": "153",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/carrito/5pIquRDec2K7T3B1j0Gs/productos/9LFAvCLWo0lmcJFw63VG",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carrito",
+						"5pIquRDec2K7T3B1j0Gs",
+						"productos",
+						"9LFAvCLWo0lmcJFw63VG"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/carrito/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "pepito 3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "precio",
+							"value": "125555",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "codigo",
+							"value": "153",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/carrito/M8PEpwfcVq8Zwb5KBswe",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carrito",
+						"M8PEpwfcVq8Zwb5KBswe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/carrito/:id/Comprar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "pepito 3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "precio",
+							"value": "125555",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "codigo",
+							"value": "153",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/carrito/62c570e7b845a3ad341bf4eb/Comprar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carrito",
+						"62c570e7b845a3ad341bf4eb",
+						"Comprar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

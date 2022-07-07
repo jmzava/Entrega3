@@ -223,3 +223,7 @@
 [2022-07-06T21:36:44.292] [WARN] fileWarn - Recurso inexistente NaN://localhost:8080/scripts/login.js
 [2022-07-06T21:36:44.510] [WARN] fileWarn - Recurso inexistente NaN://localhost:8080/scripts/prefix.js
 [2022-07-06T21:36:44.530] [WARN] fileWarn - Recurso inexistente NaN://localhost:8080/images/logocoder.png
+[2022-07-07T09:43:49.732] [WARN] fileWarn - Recurso inexistente NaN://localhost:8080/css/login.css
+[2022-07-07T09:43:49.742] [WARN] fileWarn - Recurso inexistente NaN://localhost:8080/images/logocoder.png
+[2022-07-07T09:43:49.743] [WARN] fileWarn - Recurso inexistente NaN://localhost:8080/scripts/login.js
+[2022-07-07T09:43:49.744] [WARN] fileWarn - Recurso inexistente NaN://localhost:8080/scripts/prefix.js
